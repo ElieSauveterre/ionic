@@ -2,7 +2,7 @@ FROM mikangali/android
 
 MAINTAINER Michael <mike@mikangali.com>
 
-ENV IONIC_VERSION=2.2.1 \
+ENV IONIC_VERSION=3.4.0 \
 	NODEJS_VERSION=6.9.4 \
 	CORDOVA_VERSION=6.4.0 \
 	NPM_VERSION=3.10.10 \

@@ -8,7 +8,7 @@ A [ionic 1/2](http://ionicframework.com) image, ready for Gitlab CI android buil
 
 - NodeJs
 - Npm
-- Ionic 2
+- Ionic 3
 - Cordova
 - Android-25
 
