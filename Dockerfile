@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y curl ca-certificates libfontconfig bzip
 
 # Instal Ionic
 
-	npm i -g --unsafe-perm npm@${NPM_VERSION} cordova@${CORDOVA_VERSION} ionic@${IONIC_VERSION} firebase-tools@{FIREBASE_TOOL_VERSION} && \
+	npm i -g --unsafe-perm npm@${NPM_VERSION} cordova@${CORDOVA_VERSION} ionic@${IONIC_VERSION} firebase-tools@${FIREBASE_TOOL_VERSION} && \
 
 # Install fastlane
 
