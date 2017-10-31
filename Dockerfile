@@ -2,7 +2,7 @@ FROM ubuntu:16.10
 
 MAINTAINER Elie <contact [at] eliesauveterre [dot] com>
 
-ENV IONIC_VERSION=3.3.0 \
+ENV IONIC_VERSION=3.9.2 \
 	NODEJS_VERSION=6.9.5 \
 	CORDOVA_VERSION=7.0.1 \
 	NPM_VERSION=3.10.10 \
@@ -32,4 +32,7 @@ RUN apt-get -y autoremove
 RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR "/app"
+
 EXPOSE 8100 35729
+
+CMD ["ionic", "serve"]
