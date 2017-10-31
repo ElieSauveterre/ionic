@@ -1,13 +1,11 @@
-FROM mikangali/android
+FROM ubuntu:16.04
 
-MAINTAINER Michael <mike@mikangali.com>
+MAINTAINER Elie <contact [at] eliesauveterre [dot] com>
 
-ENV IONIC_VERSION=3.15.2 \
-	NODEJS_VERSION=6.9.4 \
-	CORDOVA_VERSION=6.4.0 \
+ENV IONIC_VERSION=3.3.0 \
+	NODEJS_VERSION=6.9.5 \
+	CORDOVA_VERSION=7.0.1 \
 	NPM_VERSION=3.10.10 \
-	FASTLANE_VERSION=2.62.0 \
-  	FIREBASE_TOOL_VERSION=3.13.1 \
 	PATH=$PATH:/opt/node/bin
 
 # Install nodejs	& requirements
@@ -21,11 +19,7 @@ RUN apt-get update && apt-get install -y curl ca-certificates libfontconfig bzip
 
 # Instal Ionic
 
-	npm i -g --unsafe-perm npm@${NPM_VERSION} cordova@${CORDOVA_VERSION} ionic@${IONIC_VERSION} firebase-tools@${FIREBASE_TOOL_VERSION} && \
-
-# Install fastlane
-
-  gem install fastlane -v ${FASTLANE_VERSION}
+	npm i -g --unsafe-perm npm@${NPM_VERSION} cordova@${CORDOVA_VERSION} ionic@${IONIC_VERSION}
 
 
 WORKDIR "/app"
