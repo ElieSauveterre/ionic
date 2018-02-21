@@ -1,4 +1,4 @@
-FROM ubuntu:16.10
+FROM     ubuntu:17.10
 
 MAINTAINER Elie <contact [at] eliesauveterre [dot] com>
 
@@ -13,7 +13,7 @@ ENV IONIC_VERSION=3.9.2 \
 WORKDIR "/opt/node"
 
 RUN apt-get update && apt-get install -y curl ca-certificates git wget unzip libfontconfig bzip2 \
-    gcc make g++ ruby rubygems ruby-dev ruby-all-dev --no-install-recommends && \
+    gcc make g++ --no-install-recommends && \
     curl -sL https://nodejs.org/dist/v${NODEJS_VERSION}/node-v${NODEJS_VERSION}-linux-x64.tar.gz | tar xz --strip-components=1
 
 # Instal Ionic
@@ -23,6 +23,7 @@ RUN	npm i -g --unsafe-perm npm@${NPM_VERSION} cordova@${CORDOVA_VERSION} ionic@$
 RUN npm install -g typings
 
 # Install Sass
+RUN apt-get install -y ruby-full rubygems ruby-dev libffi-dev
 RUN gem install sass
 
 ### Clean
