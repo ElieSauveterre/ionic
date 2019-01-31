@@ -2,10 +2,10 @@ FROM     ubuntu:17.10
 
 MAINTAINER Elie <contact [at] eliesauveterre [dot] com>
 
-ENV IONIC_VERSION=3.20.0 \
-	NODEJS_VERSION=6.9.5 \
+ENV IONIC_VERSION=3.20.1 \
+	NODEJS_VERSION=8.15.0 \
 	CORDOVA_VERSION=7.0.1 \
-	NPM_VERSION=3.10.10 \
+	NPM_VERSION=6.7.0 \
 	PATH=$PATH:/opt/node/bin
 
 # Install nodejs	& requirements
